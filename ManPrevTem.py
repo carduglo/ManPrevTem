@@ -7,7 +7,7 @@ class main:
 
                         
 root = Tk()
-root.title("Aqui vai o titulo da Janela")
-root.geometry("800x600")
+root.title("Manutencao Preventiva Temporal")
+root.geometry("1024x768")
 main(root)
 root.mainloop()
