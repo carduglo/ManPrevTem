@@ -5,7 +5,7 @@ work , my pretense is not nearly be a programmer
 petitive in the labor market , since my old age I do not
 allows me to risk such a competition , but even a person
 Old as I can not abandon your dreams, then with the help of my
-friend and great teacher Volney Homes .
+friend and great teacher Volney Casas .
 We decided to do a little market research in the neighborhood where I live only
 to test what would be the acceptance of a junior developer , since a
 age be taken seriously . There were many of our sources
