@@ -21,3 +21,6 @@ of integramtes group https://www.facebook.com/groups/python.brasil/
 Who encouraged me much to post here on GitHub , and eager to
 check the reviews of many programmers and students attending
 these groups ... With my respects !
+
+
+

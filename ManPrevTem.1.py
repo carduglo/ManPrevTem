@@ -141,11 +141,7 @@ class main:
         self.entrada_combust.place(relx = 0.02, rely = 0.325, relheight = 0.042, relwidth = 0.20)
 
         
-        self.label_klm = Label(self.abas_pg1, text = u'Kilometragem ', bg = self.cor_do_fundo, font = ('Ariel', '15'))
-        self.label_klm.place(relx = 0.02, rely = 0.4) 
-        self.entrada_klm = Entry(self.abas_pg1, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
-        self.entrada_klm.place(relx = 0.02,rely = 0.45, relheight = 0.042, relwidth = 0.20)
-
+       
         self.label_kfer = Label(self.abas_pg1, text = u'Kit de ferramentas', bg = self.cor_do_fundo, font = ('Ariel', '15'))
         self.label_kfer.place(relx = 0.02, rely = 0.55) 
 
@@ -161,19 +157,35 @@ class main:
          
          
         self.label_sint = Label(self.abas_pg1, text = u'Sintomas apresentados:', bg = self.cor_do_fundo, font = ('Ariel', '15'))
-        self.label_sint.place(relx = 0.62, rely = 0.06) 
+        self.label_sint.place(relx = 0.62, rely = 0.03) 
         self.entrada_sint = Text(self.abas_pg1, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
-        self.entrada_sint.place(relx = 0.52, rely = 0.10, relheight = 0.2, relwidth = 0.45)
+        self.entrada_sint.place(relx = 0.52, rely = 0.07, relheight = 0.18, relwidth = 0.45)
 
         self.label_diag = Label(self.abas_pg1, text = u'Diagnóstico:', bg = self.cor_do_fundo, font = ('Ariel', '15'))
-        self.label_diag.place(relx = 0.68, rely = 0.32) 
+        self.label_diag.place(relx = 0.68, rely = 0.27) 
         self.entrada_diag = Text(self.abas_pg1, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
-        self.entrada_diag.place(relx = 0.52, rely = 0.38, relheight = 0.2, relwidth = 0.45)
+        self.entrada_diag.place(relx = 0.52, rely = 0.32, relheight = 0.18, relwidth = 0.45)
 
         self.label_diag = Label(self.abas_pg1, text = u'Serviço executado:', bg = self.cor_do_fundo, font = ('Ariel', '15'))
-        self.label_diag.place(relx = 0.68, rely = 0.6)
+        self.label_diag.place(relx = 0.65, rely = 0.53)
         self.entrada_diag = Text(self.abas_pg1, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
-        self.entrada_diag.place(relx = 0.52, rely = 0.65, relheight = 0.2, relwidth = 0.45)
+        self.entrada_diag.place(relx = 0.52, rely = 0.58, relheight = 0.18, relwidth = 0.45)
+
+        self.label_mecaresp = Label(self.abas_pg1, text = u'Mecânico reponsável: ', bg = self.cor_do_fundo, font = ('Ariel', '15'))
+        self.label_mecaresp.place(relx = 0.52, rely = 0.78) 
+        self.entrada_mecaresp = Entry(self.abas_pg1, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
+        self.entrada_mecaresp.place(relx = 0.52,rely = 0.83, relheight = 0.042, relwidth = 0.21)
+
+        self.label_localiz = Label(self.abas_pg1, text = u'Localização:', bg = self.cor_do_fundo, font = ('Ariel', '15'))
+        self.label_localiz.place(relx = 0.76, rely = 0.78) 
+        self.entrada_localiz = Entry(self.abas_pg1, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
+        self.entrada_localiz.place(relx = 0.76,rely = 0.83, relheight = 0.042, relwidth = 0.21)
+
+
+        self.label_mecanico = Label(self.abas_pg1, text = u'Kilometragem ', bg = self.cor_do_fundo, font = ('Ariel', '15'))
+        self.label_mecanico.place(relx = 0.02, rely = 0.4) 
+        self.entrada_mecanico = Entry(self.abas_pg1, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
+        self.entrada_mecanico.place(relx = 0.02,rely = 0.45, relheight = 0.042, relwidth = 0.20)
 
         
         #========================== -:off-set do place:- =========================================================================
@@ -221,10 +233,10 @@ class main:
         self.rb1Comb.place(relx = 0.312, rely = 0.35)
 
         self.rb2kilo = Radiobutton(self.abas_pg1, text = 'entrada',font = ('Ariel','20'), variable = self.escolha, bg = self.cor_do_fundo, value = True)
-        self.rb2kilo.place(relx = 0.312, rely = 0.475)
+        self.rb2kilo.place(relx = 0.312, rely = 0.425)
 
         self.rb2kilo = Radiobutton(self.abas_pg1, text = '    saída', font = ('Ariel','20'), variable = self.escolha, bg = self.cor_do_fundo, value = True)
-        self.rb2kilo.place(relx = 0.312, rely = 0.425)
+        self.rb2kilo.place(relx = 0.312, rely = 0.475)
 
         self.rb3kitfer = Radiobutton(self.abas_pg1, text = 'sim',font = ('Ariel','20'), variable = self.escolha, bg = self.cor_do_fundo, value = True)
         self.rb3kitfer.place(relx = 0.25, rely = 0.55)
@@ -249,11 +261,14 @@ class main:
         self.rb6estep = Radiobutton(self.abas_pg1, text = u'sim', font = ('Ariel','20'), variable = self.escolha, bg = self.cor_do_fundo, value = True)
         self.rb6estep.place(relx = 0.25, rely = 0.76)
 
-        self.botao_cadastra = Button(self.abas_pg1, bg = self.cor_do_fundo, text = "Registrar", font = ('Ariel','15'), fg = 'green')
-        self.botao_cadastra.place(relx = 0.81, rely = 0.90, height = 60, width = 160)
+        self.botao_resgist = Button(self.abas_pg1, bg = self.cor_do_fundo, text = "Registrar", font = ('Ariel','13'), fg = 'green')
+        self.botao_resgist.place(relx = 0.68, rely = 0.90, height = 57, width = 141)
 
-        self.botaocancela = Button(self.abas_pg1, bg = self.cor_do_fundo, text = 'Limpar\nCancelar', font = ('Ariel','15'), fg = 'blue')
-        self.botaocancela.place(relx = 0.52, rely = 0.90, height = 60, width = 160)
+        self.botao_impri = Button(self.abas_pg1, bg = self.cor_do_fundo, text = "Imprimir", font = ('Ariel','13'), fg = 'red')
+        self.botao_impri.place(relx = 0.835, rely = 0.90, height = 57, width = 141)
+
+        self.botaocancela = Button(self.abas_pg1, bg = self.cor_do_fundo, text = 'Limpar\nCancelar', font = ('Ariel','13'), fg = 'blue')
+        self.botaocancela.place(relx = 0.52, rely = 0.90, height = 57, width = 141)
 
         self.revsint = Radiobutton(self.abas_pg1, text = u'Revisão Sintomática', font = ('Ariel','15'), variable = self.escolha, bg = self.cor_do_fundo, value = True)
         self.revsint.place(relx = 0.02, rely = 0.82)
