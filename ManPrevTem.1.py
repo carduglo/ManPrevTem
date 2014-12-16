@@ -69,8 +69,8 @@ class main:
 
         self.label_cliente = Label(self.abas_pg0, text = 'Cliente', bg = self.cor_do_fundo, font = ('Ariel', '15'))
         self.label_cliente.place(relx = 0.02, rely = 0.25) 
-        self.entrada_placa = Entry(self.abas_pg0, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
-        self.entrada_placa.place(relx = 0.02, rely = 0.30)
+        self.entrada_cliente = Entry(self.abas_pg0, bg = self.cor_do_entrada, font = ('Ariel', '15')) 
+        self.entrada_cliente.place(relx = 0.02, rely = 0.30)
 
 
         self.label_ender = Label(self.abas_pg0, text = u'Endereço', bg = self.cor_do_fundo, font = ('Ariel', '15'))
@@ -213,16 +213,11 @@ class main:
         
         self.entrada_com.place(relx = 0.52,rely = 0.40, relheight = 0.52, relwidth = 0.45) 
 
-
-
-        
-
-
 #==================================================== -:Botoes:- =================================================================
 
 
         #Botão Cadastra
-        self.botao_cadastra = Button(self.abas_pg0, bg = self.cor_do_fundo, text="Cadastrar", font=('Ariel','15'), fg='green')
+        self.botao_cadastra = Button(self.abas_pg0, bg = self.cor_do_fundo, text="Cadastrar", font=('Ariel','15'), fg='green', command = self.cadastra)
         self.botao_cadastra.place(relx = 0.325, rely = 0.3, height = 100, width = 160)
 
         #Botão Cancelar
@@ -283,9 +278,27 @@ class main:
         self.revviagem = Radiobutton(self.abas_pg1, text = u'Revisão Viagem', font = ('Ariel','15'), variable = self.escolha, bg = self.cor_do_fundo, value = True)
         self.revviagem.place(relx = 0.02, rely = 0.93)
 
+    def cadastra(self):#.self é um comando pra pegar uma variavel em qualquer posicao do programa
+        placa = self.entrada_placa.get()# Pega numero digitado na entrada placa.
+        cliente = self.entrada_cliente.get()# Pega nome cliente
+        endereco = self.entrada_ender.get()#pega endereço 
+        cidade = self.entrada_cid.get()#pega cidade        .get absorve o conteudo da variavel
+        cep = self.entrada_cep.get()#pega cep
+        cnpj = self.entrada_cpf.get()#pega Cpf
+        telefone = self.entrada_tel.get()#pega telefone
+        email = self.entrada_email.get()#pega email
+        complemento = self.entrada_com.get(0.0, END)# pega texto digitado em complemento
 
+        print("placa",placa)
+        print("cliente", cliente)
+        print(endereco)
+        print(cidade)
+        print(cep)
+        print(cnpj)
+        print(telefone)
+        print(email)
+        print(complemento)
 
-                        
                         
 root = Tk()
 root.title("Manutencao Preventiva Temporal")
