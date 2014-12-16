@@ -3,6 +3,10 @@
 
 from Tkinter import *
 import ttk
+from Bdados import *
+
+ct = CriaTabelas()
+ct.cria()
 
 class main:
     def __init__(self,master):
